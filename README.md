@@ -4,6 +4,8 @@ Welcome to the VS Code Java world. Here is a guideline to help you get started t
 Teste de commit
 Teste de commit 3
 Teste 4
+Teste 5
+Teste 6
 
 ## Folder Structure
 
