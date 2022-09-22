@@ -1,5 +1,6 @@
 package pucrs.myflight.modelo;
 
-public class GerenciadorAeroportos {
+import java.util.ArrayList;
 
+public class GerenciadorAeroportos {
 }

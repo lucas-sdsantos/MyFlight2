@@ -8,4 +8,20 @@ public class GerenciadorCias {
 	public GerenciadorCias() {
 		empresas = new ArrayList<>();
 	}
+
+    public void adicionar(CiaAerea cia) {
+        
+    }
+
+    public ArrayList<CiaAerea> listarTodas() { //TODO
+        
+    }
+
+    public CiaAerea buscarCodigo(String cod) { //TODO
+        
+    }
+    
+    public CiaAerea buscarNome(String cod) { //TODO
+        
+    }
 }
