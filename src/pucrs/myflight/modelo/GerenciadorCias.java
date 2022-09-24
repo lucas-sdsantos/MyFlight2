@@ -14,14 +14,24 @@ public class GerenciadorCias {
     }
 
     public ArrayList<CiaAerea> listarTodas() { //TODO
-        
+        return null;
     }
 
-    public CiaAerea buscarCodigo(String cod) { //TODO
-        
+    public CiaAerea buscarCodigo(String cod) {
+        for (CiaAerea c : empresas) {
+            if (c.getCodigo().equals(cod)) {
+                return c;
+            }
+        }
+        return null;
     }
     
-    public CiaAerea buscarNome(String cod) { //TODO
-        
+    public CiaAerea buscarNome(String cod) {
+        for (CiaAerea c : empresas) {
+            if (c.getNome().equals(cod)) {
+                return c;
+            }
+        }
+        return null;
     }
 }

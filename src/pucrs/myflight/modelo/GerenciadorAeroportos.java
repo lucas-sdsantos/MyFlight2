@@ -14,10 +14,15 @@ public class GerenciadorAeroportos {
     }
 
     public ArrayList<Aeroporto> listarTodos() { //TODO
-        
+        return null;
     }
 
     public Aeroporto buscarPorCodigo(String cod) { //TODO
-        
+        for (Aeroporto a : aeroportos) {
+            if (a.getCodigo().equals(cod)) {
+                return a;
+            }
+        }
+        return null;
     }
 }

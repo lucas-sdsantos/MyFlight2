@@ -12,10 +12,10 @@ public class GerenciadorVoos {
     }
 
     public ArrayList<Voo> listarTodos() { //TODO
-        
+        return null;
     }
 
-    public ArrayList<Voo> buscarData(LocalDate date) { //TODO
-        
+    public ArrayList<Voo> buscarData(LocalDateTime date) { //TODO
+        return null;
     }
 }
