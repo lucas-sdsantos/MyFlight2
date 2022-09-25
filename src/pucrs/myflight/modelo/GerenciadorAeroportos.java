@@ -17,7 +17,7 @@ public class GerenciadorAeroportos {
         return null;
     }
 
-    public Aeroporto buscarPorCodigo(String cod) { //TODO
+    public Aeroporto buscarPorCodigo(String cod) {
         for (Aeroporto a : aeroportos) {
             if (a.getCodigo().equals(cod)) {
                 return a;
