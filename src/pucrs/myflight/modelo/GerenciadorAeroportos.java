@@ -9,8 +9,8 @@ public class GerenciadorAeroportos {
         aeroportos = new ArrayList<>();
     }
 
-    public void adicionar(Aeroporto aero) { //TODO
-        
+    public void adicionar(Aeroporto aero) {
+        aeroportos.add(aero);
     }
 
     public ArrayList<Aeroporto> listarTodos() { //TODO
