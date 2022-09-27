@@ -16,6 +16,12 @@ public class GerenciadorVoos {
     }
 
     public ArrayList<Voo> buscarData(LocalDateTime date) { //TODO
-        return null;
+        ArrayList<Voo> atDate = new ArrayList<>();
+        for (Voo i: voos){
+            if (i.getDatahora().isEqual(date)){
+                atDate.add(i);
+            }
+        }
+        return atDate;
     }
 }
