@@ -27,6 +27,9 @@ public class App {
 		//Teste para verificar a funcionalidade dos dois construtores.
 		Voo vooA = new Voo(rotaA, localDateTimeA, durationA);
 		Voo vooB = new Voo(rotaA, durationA);
+
+		//Calcular a distância entre dois aeroportos.
+		System.out.println(Geo.getDistancia(geoA, geoB));
 		
 	}
 }
