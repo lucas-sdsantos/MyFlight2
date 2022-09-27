@@ -11,11 +11,15 @@ public class GerenciadorVoos {
         voos = new ArrayList<>();
     }
 
+    public void adicionar(Voo umVoo){
+        voos.add(umVoo);
+    }
+
     public ArrayList<Voo> listarTodos() { //TODO
         return null;
     }
 
-    public ArrayList<Voo> buscarData(LocalDateTime date) { //TODO
+    public ArrayList<Voo> buscarData(LocalDateTime date) {
         ArrayList<Voo> atDate = new ArrayList<>();
         for (Voo i: voos){
             if (i.getDatahora().isEqual(date)){
