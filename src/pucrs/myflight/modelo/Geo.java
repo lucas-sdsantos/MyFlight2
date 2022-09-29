@@ -17,16 +17,26 @@ public class Geo {
 		return longitude;
 	}
 
-	public static double getDistancia(Geo a, Geo b){//Esse método precisa ser testado, algo pode estar errado.
-		return 12742 *
-		Math.asin(Math.sqrt(Math.pow(Math.sin((Math.toRadians(a.getLatitude() -
-		Math.toRadians(b.getLatitude())) ) / 2), 2) + Math.pow(Math.sin((Math.toRadians(a.getLongitude()) -
-		Math.toRadians(b.getLongitude())) / 2), 2) * Math.toRadians(Math.cos(a.getLatitude())) *
-		Math.toRadians(Math.cos(b.getLatitude()))));
-	}
+	public static double distancia(Geo geo1, Geo geo2) {
+        double lat1 = Math.toRadians(geo1.getLatitude());
+        double lat2 = Math.toRadians(geo2.getLatitude());
+        double lon1 = Math.toRadians(geo1.getLongitude());
+        double lon2 = Math.toRadians(geo2.getLongitude());
+        
+        double diflat = (lat1-lat2)/2;
+        double diflon = (lon1-lon2)/2;
+        
+        double d = Math.pow(Math.sin(diflat),2)+
+                   Math.pow(Math.sin(diflon),2)*
+                   Math.cos(lat1) * Math.cos(lat2);
+        
+        d = 2 * 6371 * Math.asin(Math.sqrt(d));
+                
+        return d;   
+    }
 	
-	public double getDistancia(Geo geo){
-		Geo geo2 = new Geo(this.latitude, this.longitude);
-		return getDistancia(geo, geo2);
-	}
+    public double distancia(Geo outra) {
+        Geo obj = new Geo(getLatitude(), getLongitude());
+        return distancia(obj, outra);
+    }
 }
