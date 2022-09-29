@@ -47,8 +47,11 @@ public abstract class Voo {
 		this.status = novo;
 	}
 */
+
+
+/*
   public String toString() {
        return status + " " + datahora + "("+duracao+"): " + rota + " -> " + rotaFinal;
     }
-  
+   */
 }

@@ -25,11 +25,11 @@ public class App {
 		LocalDateTime localDateTimeA = LocalDateTime.of(2022, 9, 27, 16, 57);
 		Duration durationA = Duration.ofMinutes(120);
 		//Teste para verificar a funcionalidade dos dois construtores.
-		Voo vooA = new Voo(rotaA, localDateTimeA, durationA);
-		Voo vooB = new Voo(rotaA, durationA);
+		//Voo vooA = new Voo(rotaA, localDateTimeA, durationA);
+		//Voo vooB = new Voo(rotaA, durationA);
 
 		//Calcular a distância entre dois aeroportos.
-		System.out.println(Geo.getDistancia(geoA, geoB));
+		System.out.println(Geo.distancia(geoA, geoB));
 		
 	}
 }
