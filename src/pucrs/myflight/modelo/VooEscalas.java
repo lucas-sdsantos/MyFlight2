@@ -9,11 +9,9 @@ public class VooEscalas extends Voo{
   private Rota rota;
   private ArrayList<Rota> rotas;
 
-  public VooEscalas (Rota rota, LocalDateTime datahora){
+  public VooEscalas (LocalDateTime datahora){
     super(datahora);
-    this.rota = rota;
     rotas = new ArrayList<>();
-    rotas.add(rota);
   }
 
   public void adicionarRota(Rota rota){
@@ -32,13 +30,13 @@ public class VooEscalas extends Voo{
       distancia += Geo.distancia(localizacaoOrigem, localizacaoDestino);
     }
     
-    duracaoEmMin += Math.round((distancia/60) + 30); //Isso só vai funcionar se a distância na fórmula for dada em Km.
+    duracaoEmMin += Math.round(((distancia/805)*60) + 30); //Isso só vai funcionar se a distância na fórmula for dada em Km.
     Duration duracaoDeVoo = Duration.ofMinutes((duracaoEmMin));
     return duracaoDeVoo;
   }
 
   public Rota getRota(){
-    return rota;
+    return rotas.get(0); //Retorna a primeira rota
   }
 
   public ArrayList<Rota> getRotas(){
