@@ -25,8 +25,8 @@ public class VooEscalas extends Voo{
     double distancia = 0;
 
     for (Rota i: rotas){
-      localizacaoOrigem = rota.getOrigem().getLocal();
-      localizacaoDestino = rota.getDestino().getLocal();
+      localizacaoOrigem = i.getOrigem().getLocal();
+      localizacaoDestino = i.getDestino().getLocal();
       distancia += Geo.distancia(localizacaoOrigem, localizacaoDestino);
     }
     
