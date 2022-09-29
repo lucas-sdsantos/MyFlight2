@@ -16,19 +16,24 @@ public class App {
 
 	public static void main(String[] args) {
 
-		// Teste do construtor da classe CiaAerea
+		// Teste dos métodos da classe CiaAerea
 		CiaAerea ciaA = new CiaAerea("34534534355", "Gol");
-		System.out.println(ciaA.getCodigo());
-		System.out.println(ciaA.getNome());
+		System.out.println("Cod.: " + ciaA.getCodigo() + "; Cia:"
+		+ ciaA.getNome() + "\n");
 
-		// Tesde do construtor da classe Geo
+		// Teste dos métodos da classe Geo
 		Geo geoA = new Geo(172.1987, -67.6805);
 		Geo geoB = new Geo(74.0824, -102.5554);
-		System.out.println(geoA);
+		System.out.println(geoA.getLatitude());
+		System.out.println(geoA.getLongitude());
+			// Calcular a distância entre dois aeroportos.
+		System.out.println(geoA.distancia(geoB) + "Km");
+		System.out.println(Geo.distancia(geoA, geoB) + "Km");
+		System.out.println();
 
 		// Teste do construtor da classe Aeroporto
 		Aeroporto aeroportoA = new Aeroporto("87994", "Aeroporto Salgado Filho", geoA);
-		Aeroporto aeroportoB = new Aeroporto("60047", "Aeroporto Caxias do Sul", geoA);
+		Aeroporto aeroportoB = new Aeroporto("60047", "Aeroporto Caxias do Sul", geoB);
 		System.out.println(aeroportoA);
 
 		// Teste do construtor de classe Aeronave
@@ -50,11 +55,6 @@ public class App {
 		Voo vooB = new VooEscalas(rotaA, localDateTimeA);
 		System.out.println(vooA);
 		System.out.println(vooB);
-
-		// Calcular a distância entre dois aeroportos.
-		System.out.println(geoA.distancia(geoB));
-
-		System.out.println(Geo.distancia(geoA, geoB));
 
 	}
 }
