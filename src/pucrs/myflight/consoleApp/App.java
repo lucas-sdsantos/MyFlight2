@@ -45,9 +45,9 @@ public class App {
 		System.out.println(vooB);
 
 		// Calcular a distância entre dois aeroportos.
-		
+		System.out.println(geoA.distancia(geoB));
 
-		// System.out.println(Geo.distancia(geoA, geoB));
+		System.out.println(Geo.distancia(geoA, geoB));
 
 	}
 }
