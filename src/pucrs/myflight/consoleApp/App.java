@@ -59,9 +59,9 @@ public class App {
 		
 		// Teste para verificar a funcionalidade dos dois construtores.
 		Voo vooA = new VooDireto(rotaA, localDateTimeA);
-		Voo vooB = new VooEscalas(rotaA, localDateTimeA);
-		System.out.println(vooA);
-		System.out.println(vooB);
+		Voo vooB = new VooEscalas(localDateTimeA);
+		System.out.println("Voo Salgado Filho, Caxias do Sul tem " + vooA.getDuracao().toMinutes() + " Minutos de duração");
+		//System.out.println(vooB);
 		System.out.println("qualquer coisa");
 
 	}
