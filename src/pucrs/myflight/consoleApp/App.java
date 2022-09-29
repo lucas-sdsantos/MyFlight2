@@ -53,7 +53,7 @@ public class App {
 		// Teste dos métodos da classe Rota
 		Rota rotaA = new Rota(ciaA, aeroportoA, aeroportoB, aeronaveA);
 		Rota rotaB = new Rota(ciaA, aeroportoB, aeroportoC, aeronaveA);
-		System.out.println("rotaA: ");
+		System.out.println("rotaA ");
 		System.out.println("Empresa: " + ciaA.getNome());
 		System.out.println("Partida: " + aeroportoA.getNome());
 		System.out.println("Destino: " + aeroportoB.getNome());
