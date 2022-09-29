@@ -26,30 +26,36 @@ public class App {
 		Geo geoB = new Geo(74.0824, -102.5554);
 		System.out.println(geoA.getLatitude());
 		System.out.println(geoA.getLongitude());
-			// Calcular a distância entre dois aeroportos.
-		System.out.println(geoA.distancia(geoB) + "Km");
-		System.out.println(Geo.distancia(geoA, geoB) + "Km");
+			// Calcular a distância entre dois pontos.
+		System.out.println(geoA.distancia(geoB) + " Km");
+		System.out.println(Geo.distancia(geoA, geoB) + " Km");
 		System.out.println();
 
-		// Teste do construtor da classe Aeroporto
+		// Teste dos métodos da classe Aeroporto
 		Aeroporto aeroportoA = new Aeroporto("87994", "Aeroporto Salgado Filho", geoA);
 		Aeroporto aeroportoB = new Aeroporto("60047", "Aeroporto Caxias do Sul", geoB);
-		System.out.println(aeroportoA);
+		System.out.println("Cod.: " + aeroportoA.getCodigo() + "; Aeroporto: "
+		 + aeroportoA.getNome());
+		System.out.println(aeroportoA.getLocal().getLatitude() + "; " + 
+		aeroportoA.getLocal().getLongitude());
 
-		// Teste do construtor de classe Aeronave
+		// Teste dos métodos da classe Aeronave
 		Aeronave aeronaveA = new Aeronave("9566543245", "eVTOL");
-		System.out.println(aeronaveA);
+		System.out.printf("Cod.: %s; Descrição: %s%n", aeronaveA.getCodigo(), 
+		aeronaveA.getDescricao());
 
-		// Teste do construtor da classe Rota
+		// Teste dos métodos da classe Rota
 		Rota rotaA = new Rota(ciaA, aeroportoA, aeroportoB, aeronaveA);
-		System.out.println(rotaA);
-
+		System.out.println("Empresa: " + ciaA.getNome());
+		System.out.println("Partida: " + aeroportoA.getNome());
+		System.out.println("Destino: " + aeroportoB.getNome());
+		System.out.println("Cod. Aeronave: " + ciaA.getCodigo());
 
 		LocalDateTime localDateTimeA = LocalDateTime.of(2022, 9, 27, 16, 57);
 		System.out.println(localDateTimeA);
 		
 		Duration durationA = Duration.ofMinutes(120);
-		System.out.println(durationA);
+		
 		// Teste para verificar a funcionalidade dos dois construtores.
 		Voo vooA = new VooDireto(rotaA, localDateTimeA);
 		Voo vooB = new VooEscalas(rotaA, localDateTimeA);
