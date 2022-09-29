@@ -1,6 +1,10 @@
-public class VooDireto extends Voo{
+import java.time.Duration;
+import java.time.LocalDateTime;
 
-  public VooDireto(Rota rota, LocalDateTime datahora, Duration duracao){
-    super(rota, datahora, duracao);
+public class VooDireto implements Voo{
+
+  private Rota rota;
+  public VooDireto(Rota rota, LocalDateTime datahora){
+    super(rota, datahora);
   }
 }
