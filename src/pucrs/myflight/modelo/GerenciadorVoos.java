@@ -15,8 +15,8 @@ public class GerenciadorVoos {
         voos.add(umVoo);
     }
 
-    public ArrayList<Voo> listarTodos() { //TODO
-        return null;
+    public ArrayList<Voo> listarTodos() {
+        return voos;
     }
 
     public ArrayList<Voo> buscarData(LocalDateTime date) {

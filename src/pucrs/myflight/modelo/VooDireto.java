@@ -16,7 +16,7 @@ public class VooDireto extends Voo{
     Geo localizacaoOrigem = rota.getOrigem().getLocal();
     Geo localizacaoDestino = rota.getDestino().getLocal();
     double distancia = Geo.distancia(localizacaoOrigem, localizacaoDestino);
-    long duracaoEmMin = Math.round(((distancia/805)*60) + 30); //Isso só vai funcionar se a distância na fórmula for dada em Km.
+    long duracaoEmMin = Math.round(((distancia/805)*60) + 30);
     Duration duracaoDeVoo = Duration.ofMinutes((duracaoEmMin));
     return duracaoDeVoo;
   }
