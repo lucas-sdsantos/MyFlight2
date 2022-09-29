@@ -13,8 +13,8 @@ public class GerenciadorAeronaves {
         aeronaves.add(aviao);
     }
 
-    public ArrayList<Aeronave> listarTodas() { //TODO
-        return null;
+    public ArrayList<Aeronave> listarTodas() {
+        return aeronaves;
     }
 
     public Aeronave buscarPorCodigo(String cod) {

@@ -9,8 +9,8 @@ public class GerenciadorRotas {
         rotas = new ArrayList<>();
     }
     
-    public ArrayList<Rota> listarTodos() { //TODO
-        return null;
+    public ArrayList<Rota> listarTodos() {
+        return rotas;
     }
 
     public ArrayList<Rota> buscasPorOrigem (Aeroporto orig) {

@@ -13,8 +13,8 @@ public class GerenciadorCias {
         
     }
 
-    public ArrayList<CiaAerea> listarTodas() { //TODO
-        return null;
+    public ArrayList<CiaAerea> listarTodas() {
+        return empresas;
     }
 
     public CiaAerea buscarCodigo(String cod) {
