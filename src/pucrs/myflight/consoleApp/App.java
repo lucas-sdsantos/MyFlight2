@@ -13,6 +13,11 @@ import pucrs.myflight.modelo.Voo;
 import pucrs.myflight.modelo.VooDireto;
 import pucrs.myflight.modelo.VooEscalas;
 
+
+/**
+* @author Lucas Schwartz dos Santos 
+* @author Vinicius Pereira Dias
+**/
 public class App {
 
 	public static void main(String[] args) {
