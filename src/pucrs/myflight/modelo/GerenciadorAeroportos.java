@@ -17,8 +17,8 @@ public class GerenciadorAeroportos {
         aeroportos.add(aero);
     }
 
-    public ArrayList<Aeroporto> listarTodos() { //TODO
-        return null;
+    public ArrayList<Aeroporto> listarTodos() {
+        return aeroportos;
     }
 
     public Aeroporto buscarPorCodigo(String cod) {
