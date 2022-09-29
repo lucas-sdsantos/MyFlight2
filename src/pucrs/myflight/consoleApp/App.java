@@ -26,11 +26,13 @@ public class App {
 		Geo geoA = new Geo(172.1987, -67.6805);
 		Geo geoB = new Geo(74.0824, -102.5554);
 		Geo geoC = new Geo(-83.5016, -22.5664);
-		System.out.println(geoA.getLatitude());
-		System.out.println(geoA.getLongitude());
-			// Calcular a distância entre dois pontos.
-		System.out.println(geoA.distancia(geoB) + " Km");
-		System.out.println(Geo.distancia(geoA, geoB) + " Km");
+		System.out.println("Latitude geoA: " + geoA.getLatitude());
+		System.out.println("Latitude geoA: " + geoA.getLongitude());
+		System.out.println();
+		
+		// Calcular a distância entre dois pontos.
+		System.out.println("Distancia entre geoA e geoB: " + geoA.distancia(geoB) + " Km");
+		//System.out.println(Geo.distancia(geoA, geoB) + " Km");
 		System.out.println();
 
 		// Teste dos métodos da classe Aeroporto
@@ -46,35 +48,35 @@ public class App {
 		Aeronave aeronaveA = new Aeronave("9566543245", "eVTOL");
 		System.out.printf("Cod.: %s; Descrição: %s%n", aeronaveA.getCodigo(), 
 		aeronaveA.getDescricao());
+		System.out.println();
 
 		// Teste dos métodos da classe Rota
 		Rota rotaA = new Rota(ciaA, aeroportoA, aeroportoB, aeronaveA);
 		Rota rotaB = new Rota(ciaA, aeroportoB, aeroportoC, aeronaveA);
+		System.out.println("rotaA: ");
 		System.out.println("Empresa: " + ciaA.getNome());
 		System.out.println("Partida: " + aeroportoA.getNome());
 		System.out.println("Destino: " + aeroportoB.getNome());
 		System.out.println("Cod. Aeronave: " + ciaA.getCodigo());
-		
+		System.out.println();
 
 		LocalDateTime localDateTimeA = LocalDateTime.of(2022, 9, 27, 16, 57);
-		System.out.println(localDateTimeA);
 		
-		Duration durationA = Duration.ofMinutes(120);
-		
-		// Teste para verificar a funcionalidade dos dois construtores.
+		// Teste dos métodos das classes VooDireto e VooEscalas.
 		VooDireto vooA = new VooDireto(rotaA, localDateTimeA);
 		VooEscalas vooB = new VooEscalas(localDateTimeA);
 
 		vooB.adicionarRota(rotaA);
 		vooB.adicionarRota(rotaB);
 		
-		System.out.println("vooA, Salgado Filho, Caxias do Sul tem " + vooA.getDuracao().toMinutes() + " Minutos de duração");
+		System.out.println("vooA parte de " + vooA.getRota().getOrigem().getNome() + " e vai para " 
+		+ vooA.getRota().getDestino().getNome() + " com duração de " + vooA.getDuracao().toMinutes());
+		System.out.println();
 
-		System.out.println(vooB.getRota().getOrigem().getNome());
-		System.out.println("vooB, Salgado Filho, Caxias do Sul, Guarulhos tem " + vooB.getDuracao().toMinutes() + " Minutos de duração");
 		ArrayList<Rota> rotasB = vooB.getRotas();
-		System.out.println("vooB parte de " + rotasB.get(0).getOrigem().getNome());
-		System.out.println("Depois, vooB parte de " + rotasB.get(1).getOrigem().getNome());
+		System.out.println("vooB parte de " + vooB.getRota().getOrigem().getNome() + " e vai para " + 
+		rotasB.get(1).getDestino().getNome() + " passando por " + vooB.getRota().getDestino().getNome() + 
+		"com duração de " + vooB.getDuracao().toMinutes());
 
 
 	}
